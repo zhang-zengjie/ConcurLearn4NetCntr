@@ -4,8 +4,8 @@
 
 Load the `param.mat` file to pull the parameters
 
-- `d_bar`, $\bar{d}$: the parameter used to generate the sinusoidal infection rates
-- `delta_bar`, $\bar{\delta}$: the baseline curing rates
-- `W`, $W$: the adjacency matrix of the network
-- `Lambda`, $\Lambda$: the parameter of the disturbance model
-- `x0`, $x(0)$: the initial condition of the system
+- $\bar{d}$, `d_bar`: the parameter used to generate the sinusoidal infection rates
+- $\bar{\delta}$, `delta_bar`: the baseline curing rates
+- $W$, `W`: the adjacency matrix of the network
+- $\Lambda$, `Lambda`: the parameter of the disturbance model
+- $x(0)$, `x0`: the initial condition of the system
