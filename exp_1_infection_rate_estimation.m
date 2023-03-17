@@ -11,18 +11,17 @@ global kappa;                   % Observer parameter kappa
 global s_lower;                 % Lower bound of S
 global s_upper;                 % Upper bound of S
 
-load("param.mat", "x0", "W", "Lambda", "beta_bar", "beta_bar_prime", "delta_bar");               
+load("param.mat", "x0", "W", "Lambda", "d_bar", "delta_bar");               
                     % Load parameters
-                    % x_0: initial condition of the system 
+                    % x0: initial condition of the system 
                     % W: adjacency matrix of the network
                     % Lambda: coefficient of disturbance model 
-                    % beta_bar: parameter of the infection rate model
-                    % beta_bar_prime: parameter of the infection rate model
+                    % d_bar: parameter of the infection rate model
                     % delta_bar: constant curing rate 
-load("exp_0_data.mat", "time", "beta");
+load("exp_0_data.mat", "time", "d");
                     % Load data
                     % time: timing sequences
-                    % beta: ground truth disturbance
+                    % d: ground truth disturbance
 
 h = 0.0001;                     % Discrete sampling time
 T = max(size(time));
@@ -63,7 +62,7 @@ for k= 1:T-1
     end
 
     L(:, :, k) = (eye(N)-diag(x(:,k)))*W*diag(x(:,k));
-    x(:,k+1) = x(:,k) + h*(L(:, :, k)*beta(:,k) - diag(x(:,k))*delta_bar);
+    x(:,k+1) = x(:,k) + h*(L(:, :, k)*d(:,k) - diag(x(:,k))*delta_bar);
     
     if k > 1
         % Stacking of the proposed observer

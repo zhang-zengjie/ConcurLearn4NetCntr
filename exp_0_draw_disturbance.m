@@ -4,7 +4,7 @@ load exp_0_data.mat
 
 hold on;
 set(0, 'DefaultFigureRenderer', 'painters')
-plot(time, beta,'LineWidth',1.5,'LineStyle','-.');
+plot(time, d,'LineWidth',1.5,'LineStyle','-.');
 axis([0,time(end),0,1.200001]);
 ax = gca;
 ax.YTick = 0:0.4:1.2;
