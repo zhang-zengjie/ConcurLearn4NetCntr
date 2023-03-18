@@ -8,7 +8,7 @@ axis([0,time(end),0,1.0000001]);
 ax = gca;
 ax.YTick = 0:0.5:1;
 ax.XTick = 0:1:5;
-ylabel('$x_i(k)$','Interpreter','latex', 'FontSize', 11);
+ylabel('$x_i(t)$','Interpreter','latex', 'FontSize', 11);
 grid on;
 set(gca,'GridLineStyle','-.', 'FontSize', 11);
 xlabel('time (s)','Interpreter','latex', 'FontSize', 11); 
