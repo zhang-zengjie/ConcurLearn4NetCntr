@@ -2,6 +2,10 @@
 
 **Author:** Zengjie Zhang, Fangzhou Liu
 
+We extract the largest strongly connected subgraph containing $67$-nodes from the high school network [1] which depicts friendships between boys in a small high school in Illinois. We adjusted the adjacency matrix of the network such that it is less ill than the original version.
+
+[1] Bonacich, Phillip, and Philip Lu. Introduction to mathematical sociology. Princeton University Press, 2012.
+
 ### The experiment parameters
 
 Load the `param.mat` file to pull the parameters
