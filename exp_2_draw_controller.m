@@ -3,7 +3,7 @@ load exp_2_data.mat;
 
 hold on;
 set(0, 'DefaultFigureRenderer', 'painters')
-plot(time(:,1:2:end), x(:,1:2:end),'LineWidth',1.5,'LineStyle','-.');
+plot(time(:,1:2:end), x(1:7:end,1:2:end),'LineWidth',1.5,'LineStyle','-.');
 axis([0,time(end),0,1.0000001]);
 ax = gca;
 ax.YTick = 0:0.5:1;
@@ -16,7 +16,7 @@ xlabel('time (s)','Interpreter','latex', 'FontSize', 11);
 x0=500;
 y0=50;
 width=500;
-height=250;
+height=180;
 
 set(gcf,'position',[x0,y0,width,height]);
 hold off;
